@@ -25,11 +25,11 @@ See comments in the individual MATLAB .m files for more information.
 ## Other code repositories
 I also wrote some of this code (for example DemoDetPoisson.m and TestDetPoisson.m) in R, Python and Julia, which have a very similar structure; see  
 
-https://github.com/hpaulkeeler/DetPoisson_Julia
+https://github.com/hpaulkeeler/detpoisson/detpoisson_julia
 
-https://github.com/hpaulkeeler/DetPoisson_Python
+https://github.com/hpaulkeeler/detpoisson/detpoisson_python
 
-https://github.com/hpaulkeeler/DetPoisson_R 
+https://github.com/hpaulkeeler/detpoisson/detPoisson_r 
 
 ## Matérn hard-core point processes
 For a very brief introduction on these point processes, see my post on simulating them:
