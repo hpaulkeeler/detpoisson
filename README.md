@@ -1,4 +1,4 @@
-# DetPoisson_MATLAB
+# detpoisson - Simulating and fitting determinantally-thinned Poisson point processes
 
 A determinantally-thinned (Poisson) point process is essentially a discrete determinantal point process whose underlying state space is a single realization of a (Poisson) point process defined on some (bounded) continuous space. I believe this is a new type of point process, originally proposed in the paper by Blaszczyszyn and Keeler[1]: 
 
