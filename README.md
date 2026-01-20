@@ -87,7 +87,7 @@ The L matrix decomposes as L[x,y] = q_x * S[x,y] * q_y where:
 
 ### Sampling Algorithm
 
-The code uses the Kulesza-Taskar algorithm:
+The code uses the algorithm from Hough, Krishnapur, Peres and Virag (popularized by Kulesza and Taskar):
 1. Eigendecompose L to get eigenvalues and eigenvectors
 2. Transform eigenvalues: λ_K = λ_L / (1 + λ_L)
 3. Perform Bernoulli trials with eigenvalues as success probabilities
@@ -103,7 +103,9 @@ The code uses the Kulesza-Taskar algorithm:
 
 1. B. Blaszczyszyn and H.P. Keeler, "Determinantal thinning of point processes with network learning applications," 2018. https://arxiv.org/abs/1810.08672
 
-2. A. Kulesza and B. Taskar, "Determinantal point processes for machine learning," Foundations and Trends in Machine Learning, 2012.
+2. J.B. Hough, M. Krishnapur, Y. Peres, and B. Virag, "Determinantal processes and independence," Probability Surveys, 2006.
+
+3. A. Kulesza and B. Taskar, "Determinantal point processes for machine learning," Foundations and Trends in Machine Learning, 2012.
 
 ## License
 

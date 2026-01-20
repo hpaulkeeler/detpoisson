@@ -29,7 +29,7 @@ The demonstration script:
 1. Simulates a Poisson point process on a unit square
 2. Constructs an L-matrix using Gaussian or Cauchy kernel
 3. Performs eigendecomposition and Bernoulli sampling
-4. Applies the Kulesza-Taskar algorithm to select points
+4. Applies the DPP sampling algorithm to select points
 5. Visualizes the original Poisson process and the determinantal subset
 
 ## Requirements

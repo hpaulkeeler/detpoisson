@@ -16,7 +16,7 @@ https://arxiv.org/abs/1810.08672
 | `DemoDetPoisson.jl` | Basic demonstration of simulating a determinantally-thinned Poisson process |
 | `TestDetPoisson.jl` | Tests DPP simulation against analytical probabilities |
 | `funLtoK.jl` | Convert L-ensemble matrix to normalized K-kernel |
-| `funSimSimpleLDPP.jl` | Simulate DPP using Kulesza-Taskar algorithm |
+| `funSimSimpleLDPP.jl` | Simulate DPP using eigendecomposition |
 
 ## Quick Start
 

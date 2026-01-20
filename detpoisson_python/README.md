@@ -30,7 +30,7 @@ https://arxiv.org/abs/1810.08672
 | File | Description |
 |------|-------------|
 | `funLtoK.py` | Convert L-ensemble matrix to normalized K-kernel |
-| `funSimSimpleLDPP.py` | Simulate DPP using Kulesza-Taskar algorithm |
+| `funSimSimpleLDPP.py` | Simulate DPP using eigendecomposition |
 | `funNeighbourL.py` | Create L-matrix using nearest-neighbour features |
 | `funLPalm.py` | Compute Palm distribution of L-matrix |
 

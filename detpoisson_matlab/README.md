@@ -32,7 +32,7 @@ This is the most complete implementation, containing the full workflow for repro
 | File | Description |
 |------|-------------|
 | `funLtoK.m` | Convert L-ensemble matrix to normalized K-kernel |
-| `funSimSimpleLDPP.m` | Simulate DPP using Kulesza-Taskar algorithm |
+| `funSimSimpleLDPP.m` | Simulate DPP using eigendecomposition |
 | `funNeighbourL.m` | Create L-matrix using nearest-neighbour features |
 | `funLPalm.m` | Compute Palm distribution of L-matrix |
 
