@@ -58,7 +58,6 @@ if (choiceKernel==1){
 # START Simulating/sampling DPP
 #Eigen decomposition
 tmp=eigen(L); eigenValuesL=tmp$values; eigenVectorsL=tmp$vectors
-eigenVectorsL[,2]=tmp$vectors[,3]; eigenVectorsL[,3]=tmp$vectors[,2]# REMOVE later
 
 eigenValuesK <- eigenValuesL / (1+eigenValuesL); #eigenvalues of K
 indexEigen <- which(runif(sizeL) <= eigenValuesK); #index of successful Bernoulli trials

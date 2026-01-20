@@ -1,43 +1,64 @@
-# DetPoissonPython
+# detpoisson_python
 
-Randomly simulates/samples a determinantally-thinned Poisson point process on a rectangle. I believe this is a new type of point process, originally proposed by Blaszczyszyn and Keeler in the paper[1]: 
+Python implementation for simulating and fitting determinantally-thinned Poisson point processes.
 
+## Overview
+
+A determinantally-thinned Poisson point process is a discrete determinantal point process whose underlying state space is a single realization of a Poisson point process defined on some bounded continuous space. This is a repulsive point process, where the repulsion depends on the kernel and average density of points.
+
+For more details, see the paper by Blaszczyszyn and Keeler:
 https://arxiv.org/abs/1810.08672
 
-A determinantally-thinned (Poisson) point process is essentially a discrete determinantal point process whose underlying state space is a single realization of a (Poisson) point process defined on some bounded continuous space. This is a repulsive point process, where the repulsion depends on the kernel and average density of points. For more details, see the paper by Blaszczyszyn and Keeler[1].
+## Files
 
-An obvious question is whether a determinantally-thinned Poisson point process is *also* a determinantal point process? The answer, we believe, is no, but it's not obvious. 
+### Demonstration and Testing
 
-If you use this code in a publication, please cite the aforementioned paper by Blaszczyszyn and Keeler[1]. Unless stated otherwise, H.P. Keeler wrote this Python code, which is based on MATLAB also written by H.P. Keeler. For further details, see https://github.com/hpaulkeeler/DetPoisson_MATLAB
+| File | Description |
+|------|-------------|
+| `DemoDetPoisson.py` | Basic demonstration of simulating a determinantally-thinned Poisson process |
+| `TestDetPoisson.py` | Tests DPP simulation against analytical probabilities |
 
-To simulate/sample the (discrete) determinantal point process, I modified the code in sample_dpp.py from this repository:
+### Fitting Workflow
 
-https://github.com/mbp28/determinantal-point-processes
+| File | Description |
+|------|-------------|
+| `SubsetDetPoissonFitMat.py` | Fit determinantal model to MATLAB-generated training data |
+| `SubsetDetPoissonGenerateMat.py` | Generate statistics using fitted parameters |
 
-## Other code repositories
+### Core Functions
 
-I originally wrote all code in R and in MATLAB, which both have a very similar structure; see:  
+| File | Description |
+|------|-------------|
+| `funLtoK.py` | Convert L-ensemble matrix to normalized K-kernel |
+| `funSimSimpleLDPP.py` | Simulate DPP using Kulesza-Taskar algorithm |
+| `funNeighbourL.py` | Create L-matrix using nearest-neighbour features |
+| `funLPalm.py` | Compute Palm distribution of L-matrix |
 
-https://github.com/hpaulkeeler/DetPoisson_R 
+## Quick Start
 
-https://github.com/hpaulkeeler/DetPoisson_MATLAB
+```bash
+# Basic demonstration
+python DemoDetPoisson.py
 
-It should be noted that there are a number of repositories with Python code for simulating/sampling (discrete) determinantal point processes. A very comprehensive one with various simulation/sampling methods (for both discrete and continuous point processes) is the following: 
+# Test against analytical results
+python TestDetPoisson.py
+```
 
-https://github.com/guilgautier/DPPy
+## Requirements
 
-Other repositories include:
+- NumPy
+- SciPy
+- Matplotlib
 
-https://github.com/javiergonzalezh/dpp
+## Other Python DPP Libraries
 
-https://github.com/mbp28/determinantal-point-processes
+For more advanced DPP implementations, see:
+- [DPPy](https://github.com/guilgautier/DPPy) - Comprehensive sampling for discrete and continuous DPPs
+- [dpp](https://github.com/javiergonzalezh/dpp)
+- [determinantal-point-processes](https://github.com/mbp28/determinantal-point-processes)
 
-https://github.com/ChengtaoLi/dpp
+## Reference
 
-https://github.com/mehdidc/dpp
+B. Blaszczyszyn and H.P. Keeler, "Determinantal thinning of point processes with network learning applications," 2018. https://arxiv.org/abs/1810.08672
 
-## Author
-H.P. Keeler, Inria/ENS, Paris, and University of Melbourne, Melbourne, 2018.
-
-## References
-[1] Blaszczyszyn and Keeler, Determinantal thinning of point processes with network learning applications, 2018.
+See also: [detpoisson_matlab](../detpoisson_matlab), [detpoisson_julia](../detpoisson_julia), [detpoisson_r](../detpoisson_r)

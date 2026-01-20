@@ -1,33 +1,49 @@
-# DetPoisson_Julia
+# detpoisson_julia
 
-Randomly simulates/samples a determinantally-thinned Poisson point process on a rectangle. I believe this is a new type of point process, originally proposed by Blaszczyszyn and Keeler in the paper[1]: 
+Julia implementation for simulating determinantally-thinned Poisson point processes.
 
+## Overview
+
+A determinantally-thinned Poisson point process is a discrete determinantal point process whose underlying state space is a single realization of a Poisson point process defined on some bounded continuous space. This is a repulsive point process, where the repulsion depends on the kernel and average density of points.
+
+For more details, see the paper by Blaszczyszyn and Keeler:
 https://arxiv.org/abs/1810.08672
 
-Run the file: DemoDetPoisson.jl
+## Files
 
-A determinantally-thinned (Poisson) point process is essentially a discrete determinantal point process whose underlying state space is a single realization of a (Poisson) point process defined on some bounded continuous space. This is a repulsive point process, where the repulsion depends on the kernel and average density of points. For more details, see the paper by Blaszczyszyn and Keeler[1].
+| File | Description |
+|------|-------------|
+| `DemoDetPoisson.jl` | Basic demonstration of simulating a determinantally-thinned Poisson process |
+| `TestDetPoisson.jl` | Tests DPP simulation against analytical probabilities |
+| `funLtoK.jl` | Convert L-ensemble matrix to normalized K-kernel |
+| `funSimSimpleLDPP.jl` | Simulate DPP using Kulesza-Taskar algorithm |
 
-An obvious question is whether a determinantally-thinned Poisson point process is *also* a determinantal point process? The answer, we believe, is no, but it's not obvious. 
+## Quick Start
 
-If you use this code in a publication, please cite the aforementioned paper by Blaszczyszyn and Keeler[1]. Unless stated otherwise, H.P. Keeler wrote this Python code, which is based on MATLAB also written by H.P. Keeler. For further details, see https://github.com/hpaulkeeler/DetPoisson_MATLAB
+```julia
+include("DemoDetPoisson.jl")
+```
 
-## Other repositories
+Or for testing:
 
-I originally wrote all the code in R and in MATLAB, which both have a very similar structure; see:  
+```julia
+include("TestDetPoisson.jl")
+```
 
-https://github.com/hpaulkeeler/DetPoisson_R 
+## Requirements
 
-https://github.com/hpaulkeeler/DetPoisson_MATLAB
+- Julia 1.0+
+- LinearAlgebra (standard library)
+- Distributions
+- Plots (for visualization)
 
-I have also written it in Python, with the simulation part copied from other code. For details see:
+## Other Julia DPP Libraries
 
-https://github.com/hpaulkeeler/DetPoisson_Python
+For more advanced DPP implementations, see:
+- [DeterminantalPointProcesses.jl](https://github.com/alshedivat/DeterminantalPointProcesses.jl)
 
-After (re)writing my simple code in Julia, I noticed this repository with Julia code that does more advanced sampling/simulating of determinantal point processes:
+## Reference
 
-https://github.com/alshedivat/DeterminantalPointProcesses.jl
+B. Blaszczyszyn and H.P. Keeler, "Determinantal thinning of point processes with network learning applications," 2018. https://arxiv.org/abs/1810.08672
 
-## References
-
-[1] Blaszczyszyn and Keeler, Determinantal thinning of point processes with network learning applications, 2018.
+See also: [detpoisson_matlab](../detpoisson_matlab), [detpoisson_python](../detpoisson_python), [detpoisson_r](../detpoisson_r)

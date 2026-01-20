@@ -42,26 +42,7 @@
 # with network learning applications, 2018.
 
 
-import numpy as np; #NumPy package for arrays, random number generation, etc
-import matplotlib.pyplot as plt #for plotting
-from scipy.io import loadmat #for reading mat files
-
-from sklearn.neighbors import NearestNeighbors
-
-plt.close("all"); # close all figures
-
-### TEMP 
-n=6;
-#xx,yy=np.meshgrid(np.linspace(0,1,n),np.linspace(0,2,n));
-#xx=np.linspace(0,1,n); 
-xx=np.array([0,0.1,0.3,0.6,1,2]);
-yy=np.linspace(0,3,n)
-#yy=np.zeros(n);
-lambda0=3;choiceKernel=1;sigma=1;
-theta=np.array([1,2,3,4,5,6]);
-N=3;
-M=2;
-
+import numpy as np  # NumPy package for arrays, random number generation, etc
 
 def funNeighbourL(xx,yy,lambda0,choiceKernel,sigma,theta,N,M):
     #Check that M is the right value if it exists
